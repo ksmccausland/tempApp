@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<h1>Header</h1>
+		</div>
+		<div class="row">
+			<div class="col-sm-4 text-center well well-sm">
+				<div>
+					<h3>North</h3>
+				</div>
+				
+				<button onclick="toolRequest()" type="button" class="btn btn-block btn-primary">
+					<h4>Temperature: 10min</h4>
+					<div class="progress">
+						<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="295" style="width:70%">
+							Temp
+						</div>
+					</div>
+					<h4 id="demo">Tool Text</h4>
+				</button>
+				<button>
+					<h4>North</h4>
+					
+					<h4>Well Text</h4>
+				</button>
+				<button>
+					<h4>North</h4>
+					
+					<h4>Well Text</h4>
+				</button>
+				<button>
+					<h4>North</h4>
+					
+					<h4>Well Text</h4>
+				</button>
+				<button>
+					<h4>North</h4>
+					
+					<h4>Well Text</h4>
+				</button>
+				<button>
+					<h4>North</h4>
+					
+					<h4>Well Text</h4>
+				</button>
+				<button>
+					<h4>North</h4>
+					
+					<h4>Well Text</h4>
+				</button>
+			</div>
+			<div class="col-sm-4">
+				<p>Column 2</p>
+			</div>
+			<div class="col-sm-4">
+				<p>Column 3</p>
+			</div>
+		</div>
+		<script>
+			function toolRequest(){
+				var output;
+				var tool = prompt("Tool number:", "xxxTxxxx-XXX");
+				
+				if(tool == null || tool == ""){
+					output = "Cancelled";
+				} else {
+					output = tool;
+				}
+				
+				document.getElementById("demo").innerHTML = output;
+			}
+		</script>
+	</body>
+</html>
